@@ -58,4 +58,4 @@ def get_size(path:Path) -> str: # here return type shoudl be a string
         str: size in KB
     """
     size_in_kb = round(os.path.getsize(path)/1024)
-    return f"~ {size} KB"
+    return f"~ {size_in_kb} KB"

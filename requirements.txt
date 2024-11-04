@@ -2,5 +2,6 @@ transformers[torch]
 accelerate 
 datasets
 sacrebleu
+ensure
 matplotlib
 -e .  
