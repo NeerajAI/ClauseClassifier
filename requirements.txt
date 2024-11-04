@@ -3,4 +3,4 @@ accelerate
 datasets
 sacrebleu
 matplotlib
--e . 
+-e .  
