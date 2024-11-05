@@ -4,4 +4,5 @@ datasets
 sacrebleu
 ensure
 matplotlib
+python-box
 -e .  
