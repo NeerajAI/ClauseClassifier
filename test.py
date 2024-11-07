@@ -56,7 +56,10 @@ trainer = Trainer(
     eval_dataset=val_dataset,
 )
 ## incase training on azure 
-from transformers.integrations import MLflowCallbacks 
-trainer.remove_classback(MLflowCallbacks)
+#from transformers.integrations import MLflowCallback
+#trainer.remove_callback(MLflowCallback)
+
+#import mlflow
+#mlflow.utils.validation.MAX_PARAM_VAL_LENGTH = 500
 
 trainer.train()
