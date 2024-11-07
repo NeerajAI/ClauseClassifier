@@ -1,5 +1,7 @@
 #!python /content/ClauseClassifier/main.py
 #!pip install -r requirements.txt
+import os 
+os.environ["WANDB_DISABLED"]="true"
 import pandas as pd
 data = pd.read_csv("/content/ClauseClassifier/artifacts/data_ingestion/master_clauses.csv")
 documents = []
@@ -53,4 +55,8 @@ trainer = Trainer(
     train_dataset=train_dataset,
     eval_dataset=val_dataset,
 )
+## incase training on azure 
+from transformers.integrations import MLflowCallbacks 
+trainer.remove_classback(MLflowCallbacks)
+
 trainer.train()
